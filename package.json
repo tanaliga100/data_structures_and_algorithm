@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon Data_Structures/linked_list.js"
+    "start": "nodemon JS_Algorithms/recursion.js"
   },
   "author": "tanaliga100",
   "license": "ISC",
