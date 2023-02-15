@@ -24,11 +24,12 @@ function binarySearch(a, t) {
       return middleIndex;
     }
     if (t < a[middleIndex]) {
-      rightIndex = middleIndex - 1;
+      return (rightIndex = middleIndex - 1);
     } else {
-      leftIndex = middleIndex + 1;
+      return (leftIndex = middleIndex + 1);
     }
   }
   return "Not Found";
 }
+console.log(binarySearch([3, 6, 10, 23, 100], 100));
 console.log(binarySearch([3, 6, 10, 23, 100], 100));
