@@ -11,3 +11,17 @@ function recFibo(n) {
 console.log(recFibo(0));
 console.log(recFibo(1));
 console.log(recFibo(6));
+
+// Factorial
+function recFac(n) {
+  if (n === 0) {
+    return 1;
+  }
+  return n * recFac(n - 1);
+}
+console.log(recFac(10));
+console.log(recFac(5));
+console.log(recFac(3));
+
+// Linear Search
+// Binary Search
