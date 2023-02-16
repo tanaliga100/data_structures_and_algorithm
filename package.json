@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon JS_Algorithms/merge-sort.js"
+    "start": "nodemon JS_Algorithms/cartesian.js"
   },
   "author": "tanaliga100",
   "license": "ISC",
