@@ -1,5 +1,39 @@
 What is a data structure ?
+
+
  a data structure is a way to store data so that it can be used effeciently.
  a data structure is a collections of data, the relationships among them and 
  the functions that can be applied to that data;
  the data that it is being modeled in a certain way.
+
+ARRAYS 
+// hold a collection of values
+// contain a mix of data types [string, number, boolean, objects]
+// resizable
+// zero-indexed || order is maintained
+// iterable ex. for-of
+// has built-in methods like =  map, filter, concat, slice, splice
+// can contain duplicate values
+
+
+OBJECTS 
+// unordered collections of key-value pairs;
+// the key must be a string or symbol and the value must be of any type;
+// to retrieve a value you can use the corresponding key. It can be achieved either with dot(.) notation or bracket [] notation
+// objects are not iterable
+
+
+SETS
+// holds a collection of values however it must be unique
+// contain a mix of data types [string, number, boolean, objects]
+// dynamically sized
+// do not maintain an insertion order
+// iterables 
+// can not contain duplicate values || will not give an error but it will ignore duplicates
+// define using a constructor
+
+
+MAPS
+// ordered collections of key-value pairs
+// to retrieve you can use the corresponding key
+// maps are iterables. they can be used with a for-loop

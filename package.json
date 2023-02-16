@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon JS_Data-Structures/objects.js"
+    "start": "nodemon JS_Data-Structures/sets.js"
   },
   "author": "tanaliga100",
   "license": "ISC",
