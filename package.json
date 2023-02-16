@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon JS_Data-Structures/maps.js"
+    "start": "nodemon JS_Data-Structures/customs/stacks.js"
   },
   "author": "tanaliga100",
   "license": "ISC",
