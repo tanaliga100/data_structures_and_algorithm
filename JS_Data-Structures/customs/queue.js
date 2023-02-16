@@ -50,6 +50,8 @@ console.log(queue.isEmpty());
 queue.enqueue(10);
 queue.enqueue(20);
 queue.enqueue(30);
+queue.enqueue(100);
+
 console.log(queue.size());
 queue.print();
 console.log(queue.dequeue());
@@ -58,3 +60,49 @@ queue.print();
 console.log(queue.dequeue());
 console.log(queue.peek());
 console.log(queue.size());
+
+// simulation of enqueue in objects
+class Queue2 {
+  constructor() {
+    this.elements = {};
+    this.head = 0;
+    this.tail = 0;
+  }
+  // add an element to the elements object
+  enqueue(el) {
+    this.elements[this.tail] = el;
+    this.tail++;
+  }
+  // remove an element from the elements object
+  dequeue() {
+    const item = this.elements[this.head];
+    delete this.elements[this.head];
+    this.head++;
+    return item;
+  }
+  // check if empty
+  isEmpty() {
+    return this.tail - this.head === 0;
+  }
+  //
+  peek() {
+    return this.elements[this.head];
+  }
+  size() {
+    return this.tail - this.head;
+  }
+  print() {
+    console.log(this.elements);
+  }
+}
+const test = new Queue2();
+console.log(test.isEmpty());
+test.enqueue(10);
+test.enqueue(20);
+test.enqueue(30);
+test.enqueue({ name: "lara" });
+console.log(test.size());
+test.print();
+
+console.log(test.dequeue());
+console.log(test.peek());
