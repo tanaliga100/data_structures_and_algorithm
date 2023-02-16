@@ -1,5 +1,5 @@
 console.log("STACKS");
-// last in first out (LIFO)
+// using (LIFO) priciples
 // abstract data type
 // supports to main operations || push && pop or add && remove
 // usage are :

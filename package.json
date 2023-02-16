@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon JS_Data-Structures/customs/stacks.js"
+    "start": "nodemon JS_Data-Structures/customs/queue.js"
   },
   "author": "tanaliga100",
   "license": "ISC",

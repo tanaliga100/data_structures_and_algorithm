@@ -1,5 +1,6 @@
  STACKS
 = last in first out (LIFO)
+= the last element that is inserted is the first element to be removed 
 = abstract data type
 = supports to main operations || push && pop or add && remove
 = usage are :
@@ -13,4 +14,15 @@
 = isEmpty(element) = check if the stack is empty
 = size(element) = check the number of elements in the stack
 = print(element) = visualize the elements in the stack
+
+
+ QUEUE
+= sequential collections of elements
+= follow the FIFO principles
+= the first element that is inserted is the first element to be removed 
+= abstract data types
+= supports to main operations || enqueue && dequeue
+= enqueue adds an element to the tail/rear of the collection
+= dequeue removes an element from the head/front of the collection
+= usage are : callback || js runtime
 
