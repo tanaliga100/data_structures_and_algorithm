@@ -1,0 +1,5 @@
+What is a data structure ?
+ a data structure is a way to store data so that it can be used effeciently.
+ a data structure is a collections of data, the relationships among them and 
+ the functions that can be applied to that data;
+ the data that it is being modeled in a certain way.
