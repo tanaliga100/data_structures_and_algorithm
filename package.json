@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon JS_Algorithms/staircase.js"
+    "start": "nodemon JS_Algorithms/towerOfHanoi.js"
   },
   "author": "tanaliga100",
   "license": "ISC",
