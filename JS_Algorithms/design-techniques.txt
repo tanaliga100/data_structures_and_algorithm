@@ -1,0 +1,15 @@
+Bruce Force => Linear Search Algorithm
+
+Greedy => Dijkstra's Algo, Prim's Algo, Kruskal's Algo
+
+Divide and Conquer 
+=> divide the problem into sub-problems which give partial solutions and can be recombined [if-   statement] to determine the over all solutions. 
+Ex. [Binary Search, Quick Sort, Merge Sort, Tower Of Hanoi]
+
+Dynamic Programming 
+=> break down into smaller sub-problems. 
+Ex. Fibo Sequence && Climbing staircase
+
+Backtracking 
+=> similar to Bruce Force, check if the solution satifies the given contrains
+. If the constrains is not satisfied. Backtrack and go on a different path.
