@@ -7,3 +7,10 @@
 =  undo operation when typing
 =  expression conversions
 =  call stack in JS runtime
+= push(element) = add an element to the top of the stack
+= pop(element) = remove an element from the top of the stack
+= peek(element) = see the element from the top of the stack || without removing
+= isEmpty(element) = check if the stack is empty
+= size(element) = check the number of elements in the stack
+= print(element) = visualize the elements in the stack
+
