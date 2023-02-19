@@ -116,7 +116,22 @@ class LinkedList {
       return null;
     }
   }
-
+  search(value) {
+    if (this.isEmpty()) {
+      console.log("NO matched value");
+      return -1;
+    }
+    let i = 0;
+    let curr = this.head;
+    while (curr) {
+      if (curr.value === value) {
+        return i;
+      }
+      curr = curr.next;
+      i++;
+    }
+    return -1;
+  }
   print() {
     if (this.isEmpty()) {
       console.log("THE LIST IS EMPTY... Please add one");
@@ -154,6 +169,7 @@ newList.print();
 console.log(newList.getSize());
 console.log(newList.removeValue("Kimmy"));
 newList.print();
+console.log(newList.search("Coldplay"));
 
 // Time Complexity || Big O
 
