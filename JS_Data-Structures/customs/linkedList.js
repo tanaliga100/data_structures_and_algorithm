@@ -94,6 +94,29 @@ class LinkedList {
     return removeNode.value;
   }
 
+  removeValue(value) {
+    if (this.isEmpty()) {
+      return null;
+    }
+    if (this.head.value === value) {
+      this.head = this.head.next;
+      this.size--;
+      return value;
+    } else {
+      let prev = this.head;
+      while (prev.next && prev.next.value !== value) {
+        prev = prev.next;
+      }
+      if (prev.next) {
+        const removeNode = prev.next;
+        prev.next = removeNode.next;
+        this.size--;
+        return value;
+      }
+      return null;
+    }
+  }
+
   print() {
     if (this.isEmpty()) {
       console.log("THE LIST IS EMPTY... Please add one");
@@ -108,6 +131,7 @@ class LinkedList {
     }
   }
 }
+
 const newList = new LinkedList();
 console.log(`List is empty`, newList.isEmpty());
 console.log(`List size`, newList.getSize());
@@ -126,7 +150,9 @@ newList.print();
 newList.insert("Coldplay", 4);
 newList.print();
 console.log(newList.removeFrom(10));
-console.log(newList.removeFrom(0));
+newList.print();
+console.log(newList.getSize());
+console.log(newList.removeValue("Kimmy"));
 newList.print();
 
 // Time Complexity || Big O
