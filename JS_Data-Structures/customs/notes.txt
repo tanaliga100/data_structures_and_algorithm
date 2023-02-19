@@ -26,3 +26,12 @@
 = dequeue removes an element from the head/front of the collection
 = usage are : callback || js runtime
 
+LINKED LIST 
+= consist of linear data structures includes serries of connected nodes
+= has a pointer that connects tot he next nodemon
+= can be easily inserted or removed
+= random of access of elements is not feasible
+= Insertion > add at the beginning || or at the given index in the LIST
+= Deletion > remove an item in a given index
+= Search > find an element given its values
+= A real world application of STACKS || QUEUES
