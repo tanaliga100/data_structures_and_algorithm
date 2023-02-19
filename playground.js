@@ -1,5 +1,5 @@
 // simulate the code here... || sandbox
-
+console.log("PLAYGROUND HERE:::::");
 function selReverse(array, length) {
   let newArr = [];
   for (let i = 0; i < array.length; i += length) {
@@ -9,17 +9,7 @@ function selReverse(array, length) {
   }
   return newArr;
 }
-
-console.log(selReverse([2, 4, 6, 8, 10, 12, 14, 16], 3)); // [6,4,2,8,10,12,14,16]
-// selReverse([2, 4, 6, 8, 10, 12, 14, 16], 3);
-// selReverse(
-//   [
-//     { name: "Alice", age: 28, gender: "female" },
-//     { name: "Bob", age: 35, gender: "male" },
-//     { name: "Charlie", age: 42, gender: "male" },
-//   ],
-//   2
-// );
+// console.log(selReverse([2, 4, 6, 8, 10, 12, 14, 16], 3)); // [6,4,2,8,10,12,14,16]
 
 function isPangram(string) {
   string = string.toLowerCase();
@@ -33,4 +23,16 @@ function isPangram(string) {
 }
 var string = "The quick brown fox jumps over the lazy dog.";
 const res = isPangram(string);
-console.log(res);
+// console.log(res);
+
+function firstNonConsecutive(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    let curr = arr[i];
+    let next = arr[i + 1];
+    if (curr + 1 !== next) {
+      return `${next} is not the first consecutive element`;
+    }
+  }
+}
+const res1 = firstNonConsecutive([1, 2, 3, 5, 5, 6, 7, 23]);
+// console.log(res1);
