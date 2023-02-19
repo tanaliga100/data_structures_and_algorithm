@@ -57,6 +57,24 @@ class LinkedList {
     }
     this.size++;
   }
+  insert(value, index) {
+    if (index < 0 || index > this.size) {
+      return;
+    }
+    if (index === 0) {
+      this.prepend(value);
+    } else {
+      const node = new Node(value);
+      let prev = this.head;
+      for (let i = 0; i < index - 1; i++) {
+        prev = prev.next;
+      }
+      node.next = prev.next;
+      prev.next = node;
+      this.size++;
+    }
+  }
+
   print() {
     if (this.isEmpty()) {
       console.log("THE LIST IS EMPTY... Please add one");
@@ -83,6 +101,8 @@ newList.prepend(30);
 newList.print();
 newList.append("Lara is appended");
 newList.prepend("Dan is prepended");
+newList.print();
+newList.insert("Kimmy", 3);
 newList.print();
 
 // Time Complexity || Big O

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon play.js"
+    "start": "nodemon JS_Data-Structures/customs/linkedList.js"
   },
   "author": "tanaliga100",
   "license": "ISC",
