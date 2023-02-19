@@ -3,7 +3,6 @@ console.log("PLAYGROUND HERE:::::");
 function selReverse(array, length) {
   let newArr = [];
   for (let i = 0; i < array.length; i += length) {
-    console.log("every iteration", i + length);
     let curr = array.slice(i, i + length);
     newArr.push(...curr.reverse());
   }
@@ -36,3 +35,32 @@ function firstNonConsecutive(arr) {
 }
 const res1 = firstNonConsecutive([1, 2, 3, 5, 5, 6, 7, 23]);
 // console.log(res1);
+
+function noOddInteger(arr) {
+  let even = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      even.push(arr[i]);
+    }
+  }
+  return even;
+}
+const test = noOddInteger([1, 23, 54, 76, 12, 562]);
+// console.log(test);
+
+function createPhoneNumber(numbers) {
+  let formattedNumber = "";
+  for (let i = 0; i < numbers.length; i++) {
+    if (i === 0) {
+      formattedNumber += "(";
+    } else if (i === 3) {
+      formattedNumber += ") ";
+    } else if (i === 6) {
+      formattedNumber += "-";
+    }
+    formattedNumber += numbers[i];
+  }
+  return formattedNumber;
+}
+const asdasd = createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
+console.log(asdasd);
