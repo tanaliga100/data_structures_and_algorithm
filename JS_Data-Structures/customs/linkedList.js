@@ -74,6 +74,25 @@ class LinkedList {
       this.size++;
     }
   }
+  removeFrom(index) {
+    if (index < 0 || index >= this.size) {
+      return null;
+    }
+    let removeNode;
+    if (index === 0) {
+      removeNode = this.head;
+      this.head = this.head.next;
+    } else {
+      let prev = this.head;
+      for (let i = 0; i < index - 1; i++) {
+        prev = prev.next;
+      }
+      removeNode = prev.next;
+      prev.next = removeNode.next;
+    }
+    this.size--;
+    return removeNode.value;
+  }
 
   print() {
     if (this.isEmpty()) {
@@ -103,6 +122,11 @@ newList.append("Lara is appended");
 newList.prepend("Dan is prepended");
 newList.print();
 newList.insert("Kimmy", 3);
+newList.print();
+newList.insert("Coldplay", 4);
+newList.print();
+console.log(newList.removeFrom(10));
+console.log(newList.removeFrom(0));
 newList.print();
 
 // Time Complexity || Big O

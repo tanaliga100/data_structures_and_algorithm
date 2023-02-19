@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon JS_Data-Structures/customs/linkedList.js"
+    "start": "nodemon JS_Data-Structures/customs/linkedList.js",
+    "test": "nodemon playground.js"
   },
   "author": "tanaliga100",
   "license": "ISC",
