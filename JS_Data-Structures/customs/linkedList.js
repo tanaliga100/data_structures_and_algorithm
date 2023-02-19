@@ -116,6 +116,7 @@ class LinkedList {
       return null;
     }
   }
+
   search(value) {
     if (this.isEmpty()) {
       console.log("NO matched value");
@@ -132,6 +133,7 @@ class LinkedList {
     }
     return -1;
   }
+
   print() {
     if (this.isEmpty()) {
       console.log("THE LIST IS EMPTY... Please add one");
@@ -168,10 +170,8 @@ console.log(newList.removeFrom(10));
 newList.print();
 console.log(newList.getSize());
 console.log(newList.removeValue("Kimmy"));
-newList.print();
+newList.print(); // Time Complexity || Big O
 console.log(newList.search("Coldplay"));
-
-// Time Complexity || Big O
 
 // Prepend = constant conplexity
 // Append = linear complexity
