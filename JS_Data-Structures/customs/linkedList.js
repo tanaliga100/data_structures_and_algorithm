@@ -39,6 +39,24 @@ class LinkedList {
     }
     this.size++; // and then increment;
   }
+  append(value) {
+    const node = new Node(value); // get the new node
+    // IF THE LIST IS EMPTY, it will directly add
+    if (this.isEmpty()) {
+      this.head = node;
+    }
+    // IF THE NODE IS NOT EMPTY, it will append in the last index
+    // get the 'this.head' as preview and assign it to new value with prev.next
+    // now the condition is as long as prev has value it will iterate over
+    else {
+      let prev = this.head;
+      while (prev.next) {
+        prev = prev.next;
+      }
+      prev.next = node;
+    }
+    this.size++;
+  }
   print() {
     if (this.isEmpty()) {
       console.log("THE LIST IS EMPTY... Please add one");
@@ -63,3 +81,11 @@ newList.prepend(20);
 newList.print();
 newList.prepend(30);
 newList.print();
+newList.append("Lara is appended");
+newList.prepend("Dan is prepended");
+newList.print();
+
+// Time Complexity || Big O
+
+// Prepend = constant conplexity
+// Append = linear complexity
