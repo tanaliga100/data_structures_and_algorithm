@@ -109,12 +109,14 @@ const list = new LinkedList();
 console.log(`List is Empty ? `, list.isEmpty());
 console.log(`List size `, list.getSize());
 list.print();
-list.prepend("LARA");
-list.prepend("KIMMY");
+list.append("LARA");
+list.print();
+list.append("KIMMY");
+list.print();
 list.append("DAN");
+list.print();
 list.append("INNA");
 list.removeFromHead();
-list.removeFromTail();
 list.removeFromTail();
 
 list.print();
