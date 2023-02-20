@@ -116,7 +116,17 @@ class LinkedList {
       return null;
     }
   }
-
+  reverse() {
+    let prev = null;
+    let curr = this.head;
+    while (curr) {
+      let next = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = next;
+    }
+    this.head = prev;
+  }
   search(value) {
     if (this.isEmpty()) {
       console.log("NO matched value");
@@ -171,7 +181,9 @@ newList.print();
 console.log(newList.getSize());
 console.log(newList.removeValue("Kimmy"));
 newList.print(); // Time Complexity || Big O
-console.log(newList.search("Coldplay"));
+// console.log(newList.search("Coldplay"));
+newList.reverse();
+newList.print(); // Time Complexity || Big O
 
 // Prepend = constant conplexity
 // Append = linear complexity

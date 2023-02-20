@@ -63,4 +63,20 @@ function createPhoneNumber(numbers) {
   return formattedNumber;
 }
 const asdasd = createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
-console.log(asdasd);
+// console.log(asdasd);
+
+function humanReadable(seconds) {
+  let hours = Math.floor(seconds / 3600);
+  let minutes = Math.floor((seconds % 3600) / 60);
+  let remainingSeconds = Math.floor(seconds % 60);
+  $;
+  const timeString = `${padZero(hours)}:${padZero(minutes)}:{padZero(
+    remainingSeconds
+  )}`;
+  return timeString;
+}
+function padZero(num) {
+  return num.toString().padStart(2, "0");
+}
+const adasd = humanReadable(59);
+console.log(adasd);
