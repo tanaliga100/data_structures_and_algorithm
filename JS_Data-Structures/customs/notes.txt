@@ -34,4 +34,8 @@ LINKED LIST
 = Insertion > add at the beginning || or at the given index in the LIST
 = Deletion > remove an item in a given index
 = Search > find an element given its values
-= A real world application of STACKS || QUEUES
+= A real world application of  STACKS || QUEUES
+
+DOUBLY LINKED LIST
+= each node contains a value field || the next node link || the previous node link
+= [insertion and removing] = both ends possible in constant time complexity but with at the expense of more space;
