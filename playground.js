@@ -69,7 +69,7 @@ function humanReadable(seconds) {
   let hours = Math.floor(seconds / 3600);
   let minutes = Math.floor((seconds % 3600) / 60);
   let remainingSeconds = Math.floor(seconds % 60);
-  $;
+
   const timeString = `${padZero(hours)}:${padZero(minutes)}:{padZero(
     remainingSeconds
   )}`;
@@ -79,4 +79,41 @@ function padZero(num) {
   return num.toString().padStart(2, "0");
 }
 const adasd = humanReadable(59);
-console.log(adasd);
+// console.log(adasd);
+
+function validParentheses(parens) {
+  let count = 0;
+
+  for (let i = 0; i < parens.length; i++) {
+    const char = parens[i];
+    console.log(char);
+
+    if (char === "(") {
+      count++;
+    } else if (char === ")") {
+      count--;
+
+      if (count < 0) {
+        return false;
+      }
+    }
+  }
+
+  return count === 0;
+}
+// console.log(validParentheses("((()))"));
+
+function towerBuilder(n) {
+  let tower = [];
+  for (let i = 1; i <= n; i++) {
+    const spaces = " ".repeat(n - i);
+    const stars = "*".repeat(i * 2 - 1);
+    console.log("stars");
+    const row = spaces + stars + spaces;
+    tower.push(row);
+  }
+
+  return tower;
+}
+
+console.log(towerBuilder(10));

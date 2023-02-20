@@ -36,6 +36,19 @@ LINKED LIST
 = Search > find an element given its values
 = A real world application of  STACKS || QUEUES
 
+
 DOUBLY LINKED LIST
 = each node contains a value field || the next node link || the previous node link
-= [insertion and removing] = both ends possible in constant time complexity but with at the expense of more space;
+= [insertion and removing] = both ends possible in constant time complexity but with at the expense of     more space;
+
+
+HASH TABLE
+= also known as hash map;
+= used to store key-value pairs;
+= it is a special implementation of Js's Objects;
+= using index to store the value;
+= hashing fn acccepts the string key, converts it into a hash code using a defined logic and then maps it 
+  into a numeric index that is within the bounds of the array;
+= has three main operations: SET a store to a key-value pair
+                             GET to retrieve a value given its key
+                             REMOVE to delete a key-value pair
