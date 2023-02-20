@@ -104,19 +104,22 @@ class LinkedList {
     }
   }
 }
+
 const list = new LinkedList();
 // if empty
-console.log(`List is Empty ? `, list.isEmpty());
-console.log(`List size `, list.getSize());
-list.print();
-list.append("LARA");
-list.print();
-list.append("KIMMY");
-list.print();
-list.append("DAN");
-list.print();
-list.append("INNA");
-list.removeFromHead();
-list.removeFromTail();
+// console.log(`List is Empty ? `, list.isEmpty());
+// console.log(`List size `, list.getSize());
+// list.print();
+// list.append("LARA");
+// list.print();
+// list.append("KIMMY");
+// list.print();
+// list.append("DAN");
+// list.print();
+// list.append("INNA");
+// list.removeFromHead();
+// list.removeFromTail();
 
-list.print();
+// list.print();
+
+module.exports = LinkedList;
