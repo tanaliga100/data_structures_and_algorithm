@@ -108,7 +108,6 @@ function towerBuilder(n) {
   for (let i = 1; i <= n; i++) {
     const spaces = " ".repeat(n - i);
     const stars = "*".repeat(i * 2 - 1);
-    console.log("stars");
     const row = spaces + stars + spaces;
     tower.push(row);
   }
