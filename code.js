@@ -41,6 +41,27 @@ console.log(lovefunc(2, 1));
 
 // Short Long Short || rearranged the array to length => short + long + short;
 function solution(a, b) {
-  return a.length < b.length ? a + b + a : b + a + b;
+  return (a.length < b.length ? a + b + a : b + a + b).length;
 }
 console.log(solution("lara", "dan"));
+
+//You only need one - Beginner ||  if the array contains the value,
+function check(a, x) {
+  if (x === "number") {
+    x = parseInt(a);
+  } else {
+    return a.indexOf(x) === -1 ? false : true;
+  }
+}
+console.log(check([100, 200, 33], 100));
+
+// countBy(1,10) === [1,2,3,4,5,6,7,8,9,10]  || countBy(2,5) === [2,4,6,8,10]
+function countBy(x, n) {
+  let z = [];
+  for (let i = 1; i <= n; i++) {
+    z.push(x * i);
+  }
+  return z;
+}
+console.log(countBy(1, 10));
+console.log(countBy(2, 10));
