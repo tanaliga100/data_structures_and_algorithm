@@ -65,3 +65,18 @@ function countBy(x, n) {
 }
 console.log(countBy(1, 10));
 console.log(countBy(2, 10));
+
+// For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.
+function findMultiples(integer, limit) {
+  const a = [];
+  // let inc = 1;
+  // while (inc * integer <= limit) {
+  //   a.push(inc * integer);
+  //   inc++;
+  // }
+  for (let i = integer; i <= limit; i += integer) {
+    a.push(i);
+  }
+  return a;
+}
+console.log(findMultiples(2, 100));
