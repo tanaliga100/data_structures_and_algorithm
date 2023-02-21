@@ -115,4 +115,69 @@ function towerBuilder(n) {
   return tower;
 }
 
-console.log(towerBuilder(10));
+// console.log(towerBuilder(10));
+
+function countSheeps(arrayOfSheep) {
+  return arrayOfSheep.filter((t) => {
+    return !t;
+  }).length;
+}
+console.log(
+  countSheeps([
+    true,
+    true,
+    true,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    true,
+    false,
+    true,
+    false,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    false,
+    true,
+    true,
+  ])
+);
+
+function DNAtoRNA(dna) {
+  return [...dna.replaceAll("T", "U")].join("");
+}
+console.log(DNAtoRNA("TTTTTTT"));
+
+function rowSumOddNumbers(n) {
+  // TODO
+  let res = 0;
+  for (let i = 1; i < n; i++) {
+    console.log(i);
+    res += i + n;
+  }
+
+  return res;
+}
+console.log(rowSumOddNumbers(3));
+
+const d = (String.prototype.toJadenCase = function () {
+  return this.split(" ")
+    .map((i) => i.replace(i[0], i[0].toUpperCase()))
+    .join("");
+});
+function sum(numbers) {
+  "use strict";
+  const sum = numbers.reduce((a, c) => {
+    return a + c;
+  }, 0);
+  return sum;
+}
+console.log(sum([1, 2 - 1, 0]));
