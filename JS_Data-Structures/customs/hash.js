@@ -65,3 +65,5 @@ table.set("mane", "dan");
 table.set("mane", "kimmy");
 console.log(table.remove("mane"));
 table.display();
+
+// Time Complexity =  Linear Time

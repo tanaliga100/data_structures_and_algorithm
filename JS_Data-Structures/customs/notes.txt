@@ -52,3 +52,18 @@ HASH TABLE
 = has three main operations: SET a store to a key-value pair
                              GET to retrieve a value given its key
                              REMOVE to delete a key-value pair
+
+TREE 
+= hierarchical data structure;
+= consists of nodes connected by edges;
+= non-linear data structure
+= a three will not contain any-loops or cycles;
+= OFTEN USED in : File System
+                : A family TREE
+                : Dom
+                : Chat Bots
+= Tree Terminology 
+                * Parent Node ? immediate predecessor of a node || B
+                * Child Node ? immediate successor of a node || C
+                * Root Node ? the node which the tree originates || A
+                * Leaf Node ? the node that have not children;

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon JS_Data-Structures/customs/hash.js",
+    "start": "nodemon JS_Data-Structures/customs/binary.js",
     "test": "nodemon playground.js"
   },
   "author": "tanaliga100",
