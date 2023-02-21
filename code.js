@@ -30,10 +30,17 @@ console.log(billboard("lara is a nice woman"));
 
 // Opposites Attract
 function lovefunc(flower1, flower2) {
-  if (flower1 % 2 === 0 && flower2 % 2 === 0) return false;
-  if (flower1 % 2 !== 0 && flower2 % 2 !== 0) return false;
-  return true;
+  return (flower1 % 2 === 0 && flower2 % 2 === 0) ||
+    (flower1 % 2 !== 0 && flower2 % 2 !== 0)
+    ? false
+    : true;
 }
 console.log(lovefunc(1, 2));
 console.log(lovefunc(2, 2));
 console.log(lovefunc(2, 1));
+
+// Short Long Short || rearranged the array to length => short + long + short;
+function solution(a, b) {
+  return a.length < b.length ? a + b + a : b + a + b;
+}
+console.log(solution("lara", "dan"));
