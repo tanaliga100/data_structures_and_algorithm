@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon JS_Data-Structures/customs/binary.js",
-    "test": "nodemon playground.js"
+    "test": "nodemon playground.js",
+    "play": "nodemon code.js"
   },
   "author": "tanaliga100",
   "license": "ISC",
