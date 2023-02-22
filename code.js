@@ -66,6 +66,7 @@ function countBy(x, n) {
 console.log(countBy(1, 10));
 console.log(countBy(2, 10));
 
+// FIND MULTIPLES
 // For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.
 function findMultiples(integer, limit) {
   const a = [];
@@ -80,3 +81,31 @@ function findMultiples(integer, limit) {
   return a;
 }
 console.log(findMultiples(2, 100));
+
+// SORT AND STAR
+function twoSort(s) {
+  const str = s.sort();
+  return [...str[0]].join("***");
+}
+console.log(
+  twoSort([
+    "bitcoin",
+    "take",
+    "over",
+    "the",
+    "world",
+    "maybe",
+    "who",
+    "knows",
+    "perhaps",
+  ])
+);
+let people = [
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 18 },
+  { name: "Charlie", age: 30 },
+  { name: "David", age: 22 },
+];
+
+people.sort((person1, person2) => person1.age - person2.age);
+console.log(people);
