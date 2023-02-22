@@ -210,3 +210,46 @@ function isDivisible(n, x, y) {
   return n % x === 0 && n % y === 0;
 }
 console.log(isDivisible(10, 2, 1));
+
+// PYTHAGOREAN
+function isPythagoreanTriple(integers) {
+  const nums = integers.sort((a, d) => a - d);
+  console.log(nums);
+  return nums[0] ** 2 + nums[1] ** 2 === nums[2] ** 2;
+}
+console.log(isPythagoreanTriple([3, 5, 4]));
+
+// ALWAYS RETURNS 5
+function unusualFive() {
+  return ".....".length;
+}
+console.log(unusualFive());
+
+// SUM MIXED VALUES
+function sumMix(x) {
+  return x.map(Number).reduce((acc, curr) => acc + curr, 0);
+}
+console.log(sumMix([1, 3, 6, 2, "9", "3"]));
+
+// REMOVE THE FIRST AND LAST INDEX VALUES
+function removeChar(str) {
+  return str.slice(1, -1);
+  // return str.substring(1, str.length - 1);
+}
+console.log(removeChar("lara marie is all"));
+
+// HOW MUCH I LOVE YOU
+function howMuchILoveYou(nbPetals) {
+  const dics = [
+    "I love you",
+    "a little",
+    "a lot",
+    "passionately",
+    "madly",
+    "not at all",
+  ];
+  let calc = dics[(nbPetals - 1) % 6];
+
+  return calc;
+}
+console.log(howMuchILoveYou(1));
