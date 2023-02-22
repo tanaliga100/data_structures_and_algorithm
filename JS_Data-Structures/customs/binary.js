@@ -50,10 +50,24 @@ class BinarySearchTree {
       }
     }
   }
+  preOrder(root) {
+    if (root) {
+      console.log(root.value);
+      this.preOrder(root.left);
+      this.preOrder(root.right);
+    }
+  }
 }
 const binary = new BinarySearchTree();
 console.log("List is empty ?", binary.isEmpty());
 binary.insert(10);
 binary.insert(5);
 binary.insert(15);
+binary.insert(3);
+binary.insert(7);
+
+console.log(binary.search(binary.root, 10));
+console.log(binary.search(binary.root, 5));
 console.log(binary.search(binary.root, 15));
+
+binary.preOrder(binary.root);
