@@ -71,6 +71,35 @@ class BinarySearchTree {
       console.log(root.value);
     }
   }
+  levelOrder() {
+    // use the optimized queue implementation
+    const queue = [];
+    queue.push(this.root);
+    while (queue.length) {
+      let curr = queue.shift();
+      console.log(curr.value);
+      if (curr.left) {
+        queue.push(curr.left);
+      }
+      if (curr.right) {
+        queue.push(curr.right);
+      }
+    }
+  }
+  min(root) {
+    if (!root.left) {
+      return root.value;
+    } else {
+      return this.min(root.left);
+    }
+  }
+  max(root) {
+    if (!root.right) {
+      return root.value;
+    } else {
+      return this.max(root.right);
+    }
+  }
 }
 const binary = new BinarySearchTree();
 console.log("List is empty ?", binary.isEmpty());
@@ -86,4 +115,7 @@ console.log(binary.search(binary.root, 15));
 
 // binary.preOrder(binary.root);
 // binary.inOrder(binary.root);
-binary.postOrder(binary.root);
+// binary.postOrder(binary.root);
+// binary.levelOrder();
+console.log(binary.min(binary.root));
+console.log(binary.max(binary.root));
