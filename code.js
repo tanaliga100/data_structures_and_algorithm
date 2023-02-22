@@ -100,3 +100,113 @@ function positiveSum(arr) {
     }, 1);
 }
 console.log(positiveSum([1, 23, 76, -12]));
+
+// SAFEN USER INPUT - htmlspecialchars
+function htmlspecialchars(formData) {
+  return (
+    (formData = formData.replace(/&/g, "&amp;")) &&
+    formData.replace(/</g, "&lt;") &&
+    formData.replace(/>/g, "&gt;") &&
+    formData.replace(/"/g, "&quot;")
+  );
+}
+console.log(htmlspecialchars('Hello, how would you & I fare?"'));
+
+// CONTAMINATION STRING
+function contamination(text, char) {
+  // if (text.length === 0 || char.length === 0) return "";
+  // let res = "";
+  // for (const _ of text) {
+  //   res += char;
+  // }
+  return char.repeat(text.length) + " !";
+}
+console.log(contamination("laramarie", "Z"));
+
+// ABBREVIATE A TWO WORD NAME
+function abbrevName(name) {
+  // return (
+  //   name[0].toUpperCase() + "." + name[name.indexOf(" ") + 1].toUpperCase()
+  // );
+  let [first, last] = name.split(" ");
+  return first[0].toUpperCase() + "." + last[0].toUpperCase();
+}
+console.log(abbrevName("jra mrie"));
+
+// CLOCK SERIES
+function past(h, m, s) {
+  const hours = h * 60 * 60 * 1000;
+  const mins = m * 60 * 1000;
+  const secs = s * 1000;
+  return hours + mins + secs;
+}
+console.log(past(1, 2, 1));
+
+// NAME SHUFFLER
+function nameShuffler(str) {
+  return str.split(" ").reverse().join(" ");
+}
+console.log(nameShuffler("lara marie"));
+
+// POWER OF 2
+function powersOfTwo(n) {
+  const res = [];
+  for (let i = 0; i <= n; i++) {
+    res.push(Math.pow(2, i));
+  }
+  return res;
+}
+console.log(powersOfTwo(4));
+
+// DOUBLE THE CHARACTER
+function doubleChar(str) {
+  let res = [];
+  for (let i = 0; i < str.length; i++) {
+    res.push((str[i] += str[i]));
+  }
+  return res.join("");
+}
+console.log(doubleChar("coldplay"));
+
+// INVERT THE VALUES
+function invert(array) {
+  let res = [];
+  for (const i of array) {
+    res.push(i * -1);
+  }
+  return res;
+}
+console.log(invert([1, 2, 3, 5, 67, -10, 0, 88]));
+
+// FAKE BINARY
+function fakeBin(x) {
+  // return x.split("").map((n) => (n < 5 ? "0" : "1"));
+  x = x.toString().split("");
+  return x.map((n) => (n < 5 ? 0 : 1)).join("");
+}
+console.log(fakeBin(45385593107843568));
+
+// SORT DESC
+const reverseSeq = (n) => {
+  let res = [];
+  for (let i = n; i > 0; i--) {
+    res.push(i);
+  }
+  return new Array(n)
+    .fill()
+    .map((d, i) => i + 1)
+    .reverse();
+};
+console.log(reverseSeq(10));
+
+// REVERSE AN ARRAY;
+function fixTheMeerkat(arr) {
+  return arr.reverse();
+}
+console.log(fixTheMeerkat(["ground", "rainbow", "sky"]));
+
+// DIVISIBLE BY X AND Y;
+function isDivisible(n, x, y) {
+  return n % x === 0 && n % y === 0;
+}
+console.log(isDivisible(10, 2, 1));
