@@ -100,6 +100,31 @@ class BinarySearchTree {
       return this.max(root.right);
     }
   }
+  delete(value) {
+    this.root = this.deleteNode(this.root, value);
+  }
+  deleteNode(root, value) {
+    if (root === null) {
+      return root;
+    }
+    if (value < root.value) {
+      root.left = this.deleteNode(root.left, value);
+    } else if (value > root.value) {
+      root.right = this.deleteNode(root.right, value);
+    } else {
+      if (!root.left && !root.right) {
+        return null;
+      }
+      if (!root.left) {
+        return root.right;
+      } else if (!root.right) {
+        return root.left;
+      }
+      root.value = this.min(root.right);
+      root.right = this.deleteNode(root.right, root.value);
+    }
+    return root;
+  }
 }
 const binary = new BinarySearchTree();
 console.log("List is empty ?", binary.isEmpty());
@@ -107,7 +132,6 @@ binary.insert(10);
 binary.insert(5);
 binary.insert(15);
 binary.insert(3);
-binary.insert(7);
 
 console.log(binary.search(binary.root, 10));
 console.log(binary.search(binary.root, 5));
@@ -117,5 +141,8 @@ console.log(binary.search(binary.root, 15));
 // binary.inOrder(binary.root);
 // binary.postOrder(binary.root);
 // binary.levelOrder();
-console.log(binary.min(binary.root));
-console.log(binary.max(binary.root));
+// console.log(binary.min(binary.root));
+// console.log(binary.max(binary.root));
+binary.levelOrder();
+binary.delete(10); // 15 became the new root node;
+binary.levelOrder();
