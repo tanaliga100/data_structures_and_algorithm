@@ -77,6 +77,26 @@ function findMultiples(integer, limit) {
   }
   return a;
 }
-console.log(findMultiples(2, 6));
+console.log(findMultiples(2, 9));
 
 // SORT AND STAR
+function twoSort(s) {
+  // return [...s.sort()[0]].join("***");
+  return [
+    ...s.reduce((acc, curr) => {
+      return acc < curr ? acc : curr;
+    }),
+  ].join("***");
+}
+console.log(twoSort(["are", "ace", "than", "writing", "out"]));
+
+// RETURNS THE SUM OF ALL THE POSITIVE INTEGERS
+function positiveSum(arr) {
+  return arr
+    .filter((n) => n > 0)
+    .reduce((acc, curr) => {
+      console.log("acc", acc + " " + "+", curr);
+      return acc + curr;
+    }, 1);
+}
+console.log(positiveSum([1, 23, 76, -12]));
