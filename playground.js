@@ -167,17 +167,3 @@ function rowSumOddNumbers(n) {
   return res;
 }
 console.log(rowSumOddNumbers(3));
-
-const d = (String.prototype.toJadenCase = function () {
-  return this.split(" ")
-    .map((i) => i.replace(i[0], i[0].toUpperCase()))
-    .join("");
-});
-function sum(numbers) {
-  "use strict";
-  const sum = numbers.reduce((a, c) => {
-    return a + c;
-  }, 0);
-  return sum;
-}
-console.log(sum([1, 2 - 1, 0]));
