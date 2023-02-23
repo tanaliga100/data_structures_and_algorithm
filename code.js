@@ -333,4 +333,78 @@ function hero(bullets, dragons) {
 }
 console.log(hero(10, 5));
 
+//EX AND OHS
+function XO(str) {
+  const arr = str.toUpperCase().split("");
+  let x = "";
+  let o = "";
+  for (let i = 0; i <= arr.length; i++) {
+    if (arr[i] === "X" || arr[i] === "O") {
+      x += arr[i] === "X";
+      o += arr[i] === "O";
+    }
+  }
+  return x.length === o.length;
+}
+console.log(XO("XXoom"));
+
+// GET THE GRADE
+function getGrade(s1, s2, s3) {
+  let grade = Math.floor((s1 + s2 + s3) / 3);
+  let letterGrade;
+  switch (true) {
+    case grade >= 90:
+      letterGrade = "A";
+      break;
+    case grade >= 80:
+      letterGrade = "B";
+      break;
+    case grade >= 70:
+      letterGrade = "C";
+      break;
+    case grade >= 60:
+      letterGrade = "D";
+      break;
+    default:
+      letterGrade = "F";
+      break;
+  }
+  return letterGrade;
+}
+console.log(getGrade(95, 90, 93));
+
+// TWO TO ONE
+function longest(s1, s2) {
+  const combined = s1.concat(s2);
+  const un = [...new Set(combined)];
+  return un.sort().join("");
+}
+console.log(longest("loopingisfunbutdangerous", "lessdangerousthancoding"));
+
+// REVERSE WORDS;
+function reverseWords(str) {
+  return str
+    .split(" ")
+    .map((word) => [...word].reverse().join(""))
+    .join(" ");
+}
+console.log(reverseWords("Lara is the just"));
+
+// SUM OF TWO LOWEST POSITIVE INTEGERS;
+function sumTwoSmallestNumbers(numbers) {
+  return numbers
+    .sort((a, d) => a - d)
+    .slice(0, 2)
+    .reduce((a, c) => a + c, 0);
+}
+console.log(sumTwoSmallestNumbers([1, 5, 8, 12, 19, 22]));
+
+var summation = function (num) {
+  let sum = 0; // 1,3
+  for (let i = 1; i <= num; i++) {
+    sum = sum + i;
+  }
+};
+console.log(summation(3));
+
 // 33 - last
