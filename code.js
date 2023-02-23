@@ -253,3 +253,49 @@ function howMuchILoveYou(nbPetals) {
   return calc;
 }
 console.log(howMuchILoveYou(1));
+
+// CATEGORIZE NEW MEMBER
+function openOrSenior(data) {
+  return data.map(([age, handicap, thing]) => {
+    return age >= 55 && handicap > 7 ? "Senior" : "Open";
+  });
+}
+console.log(
+  openOrSenior([
+    [18, 20],
+    [45, 2],
+    [61, 12],
+    [37, 6],
+    [21, 21],
+    [78, 9],
+  ])
+);
+
+// COMPLEMENTARY DNA
+function DNAStrand(dna) {
+  const dict = { A: "T", C: "G", G: "C", T: "A" };
+  return [...dna].map((base) => dict[base]).join("");
+}
+console.log(DNAStrand("ATTGC"));
+
+// SUM ALL WITHOUT THE HIGHEST AND LOWEST NUMBER;
+function sumArray(array) {
+  return Array.isArray(array) && array.length > 1
+    ? array.reduce((acc, curr) => acc + curr, 0) -
+        Math.min(...array) -
+        Math.max(...array)
+    : 0;
+}
+console.log(sumArray([-6, -20, -1, -10, -12]));
+
+// COUNT SHEEP
+var countSheep = function (num) {
+  let newStr = "";
+  for (let i = 1; i <= num; i++) {
+    newStr += `${i}sheep... `;
+  }
+  return newStr;
+};
+console.log(countSheep(10));
+
+// 33 - last
