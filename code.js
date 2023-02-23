@@ -298,4 +298,39 @@ var countSheep = function (num) {
 };
 console.log(countSheep(10));
 
+// A SQUARE OF SQUARES
+var isSquare = function (n) {
+  const root = Math.sqrt(n);
+  return root === Math.floor(root);
+};
+console.log(isSquare(25));
+
+// ROCK PAPER SCISSORS
+const rps = (p1, p2) => {
+  if (p1 === p2) return "Draw!";
+  let rules = { paper: "scissors", rock: "paper", scissors: "rock" };
+  if (p1 === rules[p2]) {
+    return "Player 1 won!";
+  } else {
+    return "Player 2 won!";
+  }
+};
+console.log(rps("rock", "paper"));
+
+// MAX AND MIN VALUES IN THE LIST;
+var min = function (list) {
+  return Math.min(...list);
+};
+var max = function (list) {
+  return Math.max(...list);
+};
+console.log(min([-52, 56, 30, 29, -54, 0, -110]));
+console.log(max([-52, 56, 30, 29, -54, 0, -110]));
+
+// NUMBERS OF BULLETS TO CARRY TO DEFEAT THE DRAGON;
+function hero(bullets, dragons) {
+  return bullets >= dragons * 2;
+}
+console.log(hero(10, 5));
+
 // 33 - last
