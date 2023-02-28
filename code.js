@@ -293,8 +293,8 @@ var countSheep = function (num) {
   let newStr = "";
   for (let i = 1; i <= num; i++) {
     newStr += `${i}sheep... `;
+    return newStr;
   }
-  return newStr;
 };
 console.log(countSheep(10));
 
@@ -338,13 +338,13 @@ function XO(str) {
   const arr = str.toUpperCase().split("");
   let x = "";
   let o = "";
+  return x.length === o.length;
   for (let i = 0; i <= arr.length; i++) {
     if (arr[i] === "X" || arr[i] === "O") {
       x += arr[i] === "X";
       o += arr[i] === "O";
     }
   }
-  return x.length === o.length;
 }
 console.log(XO("XXoom"));
 
@@ -458,12 +458,106 @@ function sortArray(array) {
 }
 // 1  3  2  8  5  4
 console.log(sortArray([5, 3, 2, 8, 1, 4]));
-
 // CALCULATE THE FUEL
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
-  const fuel = mpg * fuelLeft;
   return mpg * fuelLeft >= distanceToPump;
 };
 console.log(zeroFuel(50, 25, 2));
+//LOST WITHOUT A MAP
+function maps(x) {
+  return x.map((num) => num * 2);
+}
+console.log(maps([2, 5, 10, -3]));
+// HEXADECIMAL
+function hexToDec(hexString) {
+  return parseInt(hexString, 16);
+}
+console.log(hexToDec("FF"));
+// COUNT POSITIVES AND SUM OF NEGATIVES
+function countPositivesSumNegatives(input) {
+  if (input === null || input.length === 0) {
+    return [];
+  }
+  let countofPositives = input.filter((n) => n > 0 && n !== 0).length;
+  let countofNegatives = input
+    .filter((n) => n < 0 && n !== 0)
+    .reduce((acc, curr) => acc + curr, 0);
+  return [countofPositives, countofNegatives];
+}
+console.log(
+  countPositivesSumNegatives([
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15,
+  ])
+);
+// STRINGS WITH VALUES ON ALPHABET
+function high(words) {
+  const alp = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+  ];
+  // Split the string into an array of words
+  const wordArray = words.split(" ");
 
-// 33 - last
+  // Sort the words by score and return the highest scoring one
+  return wordArray.sort((a, b) => {
+    const getScore = (word) =>
+      word
+        .split("")
+        .reduce((score, char) => score + char.charCodeAt(0) - 96, 0);
+    return getScore(b) - getScore(a);
+  })[0];
+}
+console.log(high("Lara is the just world"));
+// FIND THE UNIQUE NUMBER
+function findUniq(arr) {
+  // let uniqueNumber = 0;
+  // let numbersCount = {};
+  // for (let i = 0; i < arr.length; i++) {
+  //   if (numbersCount[arr[i]]) {
+  //     numbersCount[arr[i]]++;
+  //   } else {
+  //     numbersCount[arr[i]] = 1;
+  //   }
+  // }
+  // for (let num in numbersCount) {
+  //   if (numbersCount[num] === 1) {
+  //     uniqueNumber = Number(num);
+  //     break;
+  //   }
+  // }
+  // return numbersCount;
+  return Number(arr.filter((val) => arr.indexOf(val) == arr.lastIndexOf(val)));
+}
+console.log(findUniq([13, 3, 6, 6, 1, 10, 10, 1, 1, 2, 2, 1, 3, 3, 1]));
+
+// TAKE THE DERIVATIVE
+function derive(coefficient, exponent) {
+  const prod = coefficient * exponent;
+  return `${prod}x^${exponent - 1}`;
+}
+console.log(derive(5, 9));
+// 33 - LAST
