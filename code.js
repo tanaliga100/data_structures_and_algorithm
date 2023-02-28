@@ -560,4 +560,9 @@ function derive(coefficient, exponent) {
   return `${prod}x^${exponent - 1}`;
 }
 console.log(derive(5, 9));
-// 33 - LAST
+// REVERSED STRING
+function reverse(str) {
+  return [...str].reverse().join("");
+}
+console.log(reverse("lara marie"));
+// 46 - LAST
