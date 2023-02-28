@@ -404,7 +404,66 @@ var summation = function (num) {
   for (let i = 1; i <= num; i++) {
     sum = sum + i;
   }
+  return sum;
 };
 console.log(summation(3));
+
+// Ones && Zeros
+const binaryArrayToNumber = (arr) => {
+  return [...arr][0];
+};
+console.log(binaryArrayToNumber([12, 1, 1, 1]));
+
+// DUPLICATE ENCODE
+function duplicateEncode(word) {
+  word = word.toLowerCase();
+  let charCount = {};
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] in charCount) {
+      charCount[word[i]]++;
+    } else {
+      charCount[word[i]] = 1;
+    }
+  }
+  let str = "";
+  for (let i = 0; i < word.length; i++) {
+    if (charCount[word[i]] > 1) {
+      str += ")";
+    } else {
+      str += "(";
+    }
+  }
+  return str.toLowerCase();
+}
+
+// GET THE VOWELS COUNT
+const getCount = (str) => {
+  const vowels = ["a", "e", "i", "o", "u"];
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    console.log(str[i]);
+    if (vowels.includes(str[i])) {
+      count++;
+    }
+  }
+  return count;
+};
+console.log(getCount("lara is the just"));
+
+// SORT ODD NUMBERS || RETAIN EVEN NUMBERS TO THEIR POSITIONS
+function sortArray(array) {
+  const oddNums = array.filter((num) => num % 2 !== 0).sort((a, d) => a - d);
+  return array.map((num) => (num % 2 !== 0 ? oddNums.shift() : num));
+  // return array.map((num) => (num % 2 !== 0 ? oddNums.shift() : num));
+}
+// 1  3  2  8  5  4
+console.log(sortArray([5, 3, 2, 8, 1, 4]));
+
+// CALCULATE THE FUEL
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  const fuel = mpg * fuelLeft;
+  return mpg * fuelLeft >= distanceToPump;
+};
+console.log(zeroFuel(50, 25, 2));
 
 // 33 - last
