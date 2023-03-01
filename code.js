@@ -595,10 +595,33 @@ class Kata {
 }
 // MERGE TWO SORTED ARRAYS
 function mergeArrays(arr1, arr2) {
-  return arr1
-    .concat(arr2)
+  return [...arr1, ...arr2]
     .sort((a, d) => a - d)
     .filter((value, index, self) => self.indexOf(value) === index);
 }
-console.log(mergeArrays([1, 0, -1, 2, 2, 3, 3, 4, 5], [6, 7, 8, 9, 10]));
+console.log(
+  mergeArrays(
+    ["lara", 1, 1, 1, 0, -1, 2, 2, 3, 3, 4, 5, ["dan", "lara"]],
+    [6, 7, 8, 9, 10]
+  )
+);
+// BLUE AND RED MARBLES
+function guessBlue(blueStart, redStart, bluePulled, redPulled) {
+  const blue = blueStart - bluePulled;
+  const red = redStart - redPulled;
+  return blue / (blue + red);
+}
+console.log(guessBlue(5, 5, 2, 3));
+// ALTERNATE THE STRING CASE
+String.prototype.toAlternatingCase = function () {
+  let newString = "";
+  for (const char of this) {
+    if (char === char.toUpperCase()) {
+      newString += char.toLowerCase();
+    } else {
+      newString += char.toUpperCase();
+    }
+  }
+  return newString;
+};
 // 46 - LAST
