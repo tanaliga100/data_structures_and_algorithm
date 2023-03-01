@@ -177,7 +177,6 @@ function invert(array) {
   return res;
 }
 console.log(invert([1, 2, 3, 5, 67, -10, 0, 88]));
-
 // FAKE BINARY
 function fakeBin(x) {
   // return x.split("").map((n) => (n < 5 ? "0" : "1"));
@@ -185,7 +184,6 @@ function fakeBin(x) {
   return x.map((n) => (n < 5 ? 0 : 1)).join("");
 }
 console.log(fakeBin(45385593107843568));
-
 // SORT DESC
 const reverseSeq = (n) => {
   let res = [];
@@ -624,4 +622,45 @@ String.prototype.toAlternatingCase = function () {
   }
   return newString;
 };
+// FIND THE SMALLES INTEGER
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return Math.min(...args);
+  }
+}
+// CAPITALIZE THE STRING
+function capitalizeWord(word) {
+  return word[0].toUpperCase() + word.slice(1);
+}
+console.log(capitalizeWord("jordan"));
+// QUARTER OF THE YEAR
+const quarterOf = (month) => {
+  return Math.ceil(month / 3);
+};
+console.log(quarterOf(12));
+// MULTIPLE IN ORDER
+function grow(x) {
+  return x.reduce((acc, curr) => acc * curr, 1);
+}
+console.log(grow([1, 2, 3, 4]));
+//  REMOVE THE SPACE IN BETWEENS
+function noSpace(x) {
+  // return x.replaceAll(" ", "");
+  // return x.split(" ").join("");
+  let newStr = "";
+  for (const char of x) {
+    if (char !== " ") newStr += char;
+  }
+  return newStr;
+}
+console.log(noSpace("lar a                  marie"));
+// WELL OF IDES " EASY VERSION"
+function well(x) {
+  let str = "";
+  for (const char of x) {
+    return char.indexOf("bad");
+  }
+}
+console.log(well(["good", "bad", "bad", "bad", "bad"]));
+
 // 46 - LAST
