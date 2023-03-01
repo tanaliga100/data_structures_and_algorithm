@@ -565,4 +565,40 @@ function reverse(str) {
   return [...str].reverse().join("");
 }
 console.log(reverse("lara marie"));
+//FIND THE NEEDLE AT WHAT INDEX
+function findNeedle(haystack) {
+  return `found the needle at position ${haystack.indexOf("needle")}`;
+}
+console.log(
+  findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"])
+);
+// GET CHAR FROM ASCII VALUE
+function getChar(c) {
+  return String.fromCharCode(c);
+}
+console.log(getChar(65));
+// LOOK FOR A TAIL
+function correctTail(body, tail) {
+  return body.slice(-1) === tail;
+}
+console.log(correctTail("Fox", "x"));
+// REPEAT THE STRING
+function repeatStr(n, s) {
+  return s.repeat(n);
+}
+console.log(repeatStr(5, "dan"));
+// VOLUME OF CUBOID
+class Kata {
+  static getVolumeOfCuboid(length, width, height) {
+    return length * width + height;
+  }
+}
+// MERGE TWO SORTED ARRAYS
+function mergeArrays(arr1, arr2) {
+  return arr1
+    .concat(arr2)
+    .sort((a, d) => a - d)
+    .filter((value, index, self) => self.indexOf(value) === index);
+}
+console.log(mergeArrays([1, 0, -1, 2, 2, 3, 3, 4, 5], [6, 7, 8, 9, 10]));
 // 46 - LAST
