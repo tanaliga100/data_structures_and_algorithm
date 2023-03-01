@@ -656,11 +656,25 @@ function noSpace(x) {
 console.log(noSpace("lar a                  marie"));
 // WELL OF IDES " EASY VERSION"
 function well(x) {
-  let str = "";
-  for (const char of x) {
-    return char.indexOf("bad");
-  }
+  let good = x.reduce((count, idea) => {
+    if (idea === "good") {
+      count += 1;
+    }
+    return count;
+  }, 0);
+  if (good > 2 || good === 1) return "Publish!";
+  if (good > 2) return "I smell a series!";
+  return "Fail!";
+  // let good = 0;
+  // for (const idea of x) {
+  //   if (idea === "good") {
+  //     good += 1;
+  //   }
+  // }
+  // if (good === 2 || good === 1) return "Publish!";
+  // if (good > 2) return "I smell a series!";
+  // return "Fail!";
 }
-console.log(well(["good", "bad", "bad", "bad", "bad"]));
+console.log(well(["good", "good", "good", "bad", "bad", "bad", "bad"]));
 
 // 46 - LAST
