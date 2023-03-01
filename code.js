@@ -662,7 +662,7 @@ function well(x) {
     }
     return count;
   }, 0);
-  if (good > 2 || good === 1) return "Publish!";
+  if (good === 2 || good === 1) return "Publish!";
   if (good > 2) return "I smell a series!";
   return "Fail!";
   // let good = 0;
@@ -677,4 +677,4 @@ function well(x) {
 }
 console.log(well(["good", "good", "good", "bad", "bad", "bad", "bad"]));
 
-// 46 - LAST
+// 60 - LAST
