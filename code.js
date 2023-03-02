@@ -751,4 +751,37 @@ function updateLight(current) {
   return color;
 }
 console.log(updateLight("yellow"));
+// BREAK CAMEL CASING
+function solution(string) {
+  return string
+    .split("")
+    .map((char) => {
+      if (char === char.toUpperCase()) {
+        return " ".concat(char);
+      } else return char;
+    })
+    .join("");
+}
+console.log(solution("camelCasing"));
+// DELETE OCCURENCES THAT APPEARS MORE THAN ONCE
+function deleteNth(list, n) {
+  const counts = {};
+  // const result = [];
+  // for (let i = 0; i < list.length; i++) {
+  //   const num = list[i];
+  //   if ((counts[num] || 0) < n) {
+  //     result.push(num);
+  //     counts[num] = (counts[num] || 0) + 1;
+  //   }
+  // }
+  // return result;
+  return list.reduce((acc, curr) => {
+    if ((counts[curr] || 0) < n) {
+      acc.push(curr);
+      counts[curr] = (counts[curr] || 0) + 1;
+    }
+    return acc;
+  }, []);
+}
+console.log(deleteNth([1, 1, 3, 3, 7, 2, 2, 2, 2], 3));
 // 60 - LAST TIME
