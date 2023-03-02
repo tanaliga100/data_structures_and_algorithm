@@ -676,5 +676,79 @@ function well(x) {
   // return "Fail!";
 }
 console.log(well(["good", "good", "good", "bad", "bad", "bad", "bad"]));
+// GIVE THE MAXIMUM AND MINIMUM
+function minMax(arr) {
+  return [Math.min(...arr), Math.max(...arr)];
+}
+console.log(minMax([1, 2, 3, 4, 5]));
+// RETURN WHAT IS LEFT
+var number = function (busStops) {
+  let laman = busStops.map((x) => x[0]).reduce((acc, curr) => acc + curr, 0);
+  let nabawas = busStops.map((x) => x[1]).reduce((acc, curr) => acc + curr, 0);
+  return laman - nabawas;
+};
+const args = [
+  [10, 0],
+  [3, 5],
+  [5, 8],
+];
+console.log(number(args));
 
-// 60 - LAST
+// CALCULATE THE TIME REMAINING
+function queueTime(customers, n) {
+  const tills = new Array(n).fill(0);
+  for (let i = 0; i < customers.length; i++) {
+    const minTime = Math.min(...tills);
+    const index = tills.indexOf(minTime);
+    tills[index] += customers[i];
+  }
+  return Math.max(...tills);
+}
+console.log(queueTime([1, 2, 3, 4, 5], 100));
+// FIND THE FIRST NON-CONSECUTIVE
+function firstNonConsecutive(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] !== arr[i - 1] + 1) {
+      return arr[i];
+    }
+  }
+  return null;
+}
+console.log(firstNonConsecutive([1, 2, 3, 4, 5, 7, 8]));
+// ODD OR EVEN
+function oddOrEven(array) {
+  return array.reduce((a, c) => a + c, 0) % 2 !== 0 ? "odd" : "even";
+}
+console.log(oddOrEven([1, 2, 2]));
+// RETURN A MESSAGE
+function hoopCount(n) {
+  return n >= 10
+    ? "Great, now move on to tricks"
+    : "Keep at it until you get it";
+}
+console.log(hoopCount(10));
+// REMOVES ALL EXCLAMATION POINT
+function removeExclamationMarks(s) {
+  return s.replaceAll("!", "");
+}
+console.log(removeExclamationMarks("Hello World!"));
+// CALCULATE THE AVERAGE
+function findAverage(array) {
+  return array.length > 0
+    ? array.reduce((acc, curr) => acc + curr, 0) / array.length
+    : 0;
+}
+console.log(findAverage([1, 2, 3, 4]));
+// TRAFFIC LIGHTS
+function updateLight(current) {
+  const matches = { green: "yellow", yellow: "red", red: "green" };
+  let color = null;
+  for (const m in matches) {
+    if (m === current) {
+      color = matches[m];
+    }
+  }
+  return color;
+}
+console.log(updateLight("yellow"));
+// 60 - LAST TIME
