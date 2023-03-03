@@ -643,17 +643,7 @@ function grow(x) {
   return x.reduce((acc, curr) => acc * curr, 1);
 }
 console.log(grow([1, 2, 3, 4]));
-//  REMOVE THE SPACE IN BETWEENS
-function noSpace(x) {
-  // return x.replaceAll(" ", "");
-  // return x.split(" ").join("");
-  let newStr = "";
-  for (const char of x) {
-    if (char !== " ") newStr += char;
-  }
-  return newStr;
-}
-console.log(noSpace("lar a                  marie"));
+
 // WELL OF IDES " EASY VERSION"
 function well(x) {
   let good = x.reduce((count, idea) => {
@@ -784,4 +774,41 @@ function deleteNth(list, n) {
   }, []);
 }
 console.log(deleteNth([1, 1, 3, 3, 7, 2, 2, 2, 2], 3));
-// 60 - LAST TIME
+//  REMOVE THE SPACE IN BETWEENS
+function noSpace(x) {
+  // return x.replaceAll(" ", "");
+  let newStr = "";
+  for (const char of x) {
+    if (char !== " ") newStr += "" + char;
+  }
+  return newStr;
+}
+console.log(noSpace("lar a                  marie"));
+//WELL OF IDEAS
+function well(x) {
+  // 1 || 2 goods = Publish
+  // 3 || more = series
+  let good = x.reduce((acc, curr) => {
+    if (curr === "good") {
+      acc += 1;
+    }
+    return acc;
+  }, 0);
+  if (good === 2 || good === 1) return "Publish!";
+  if (good > 2) return "I smell a series!";
+  return "Fail!";
+}
+console.log(
+  well(["good", "bad", "bad", "bad", "bad", "good", "bad", "bad", "good"])
+);
+// CALCULATE THE DISTANCE TIME
+function distanceBetweenPoints(a, b) {
+  function distanceBetweenPoints(a, b) {
+    const x = a.x - b.x;
+    const y = a.y - b.y;
+    return Math.sqrt(x ** 2 + y ** 2);
+  }
+}
+console.log(distanceBetweenPoints());
+
+// 60 - LAST
