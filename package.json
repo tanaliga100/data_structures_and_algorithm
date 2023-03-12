@@ -7,7 +7,8 @@
     "start": "nodemon JS_Data-Structures/customs/binary.js",
     "test": "nodemon playground.js",
     "play": "nodemon code.js",
-    "dev": "nodemon BIG_O/index2.js"
+    "dev": "nodemon BIG_O/index2.js",
+    "try": "nodemon try.js"
   },
   "author": "tanaliga100",
   "license": "ISC",
