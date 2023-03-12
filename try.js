@@ -38,3 +38,14 @@ arr.splice(2);
 arr.splice(1, 2, 6, 7);
 arr.splice(2, 0, 3, 4, 5);
 console.log(arr);
+// .slice method -> slices out a piece from the array. It creates a new array || IT will returns kung ano yung natitira sa array;
+let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let newnums = nums.slice(1, 5);
+console.log("slice", newnums);
+// isArray method = returns true if the args is an array otherwise false;
+let args = ["adsa", 21, { age: 21 }, false];
+console.log(Array.isArray(args));
+// indexOf method = returns the first index position of a specified value || returns -1 if the value is not found || it searches from left to right || negative start values counts from last element (but still searches from left to right)
+let elems = ["laptop", "headset", "mobile", "mobile", "mobile", "tablet"];
+console.log(elems.indexOf("mobile", 3)); // started at index 3 | map left to right;
+console.log(elems.lastIndexOf("mobile", 3)); // started at index 3 | map right to left;
