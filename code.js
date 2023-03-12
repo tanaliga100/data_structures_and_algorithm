@@ -811,4 +811,39 @@ function distanceBetweenPoints(a, b) {
 }
 console.log(distanceBetweenPoints());
 
+function removeSmallest(numbers) {
+  const numsCopy = numbers.slice(); // make copy
+  if (numsCopy.length === 0) return [];
+  let smallestIndex = 0;
+  for (let i = 0; i < numsCopy.length; i++) {
+    if (numsCopy[i] < numsCopy[smallestIndex]) {
+      smallestIndex = i;
+    }
+  }
+
+  numsCopy.splice(smallestIndex, 1);
+  return numsCopy.splice(smallestIndex, 1);
+}
+
+let res = removeSmallest([100, 10, 10, 2, 1, 4, 5, 2, 5]);
+console.log(res);
+
+function wave(str) {
+  let newStr = [];
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === " ") continue;
+    newStr.push(str.slice(0, i) + str[i].toUpperCase() + str.slice(i + 1));
+  }
+  return newStr;
+}
+console.log(wave("hello"));
+
+function sumStr(a, b) {
+  const one = BigInt(a);
+  const two = BigInt(b);
+  let res = String(one + two);
+  return res;
+}
+console.log(sumStr("34", "5"));
+
 // 60 - LAST
