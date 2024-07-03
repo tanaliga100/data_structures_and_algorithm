@@ -1,0 +1,22 @@
+let letters = []; // THIS IS THE STACK
+let word = "racecar";
+let rWrord = [];
+
+// put the letter of the word into stack
+for (let i = 0; i < word.length; i++) {
+  // console.log("index", word[i]);
+  letters.push(word[i]);
+}
+console.log("LETTERS", letters);
+
+// pop off the stack in reverse order
+for (let i = 0; i < word.length; i++) {
+  rWrord.push(letters.pop());
+}
+console.log("REVERSE LETTERS", rWrord);
+
+if (word === rWrord.join("")) {
+  console.log("its s palindrome");
+} else {
+  console.log("not its not a palindrome");
+}
